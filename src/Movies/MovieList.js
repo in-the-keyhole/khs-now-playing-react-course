@@ -9,7 +9,7 @@ export default function MovieList({movies}) {
             <div className="movie-detail" key={index}>
                 <Link to={url}>
                     <img
-                        src={`${process.env.PUBLIC_URL}/images/posters${item.poster}`}
+                        src={`${process.env.PUBLIC_URL}/images/posters${item.poster_path}`}
                         alt={`Poster for ${item.title}`}
                     />
                 </Link>
@@ -17,6 +17,9 @@ export default function MovieList({movies}) {
         )
     })
     return (<div>
-                   {movieList.map((item) => item)}
+        <ul>
+            {movieList.map((item) => <li>{item}</li>) }
+        </ul>
+
     </div>)
 }
