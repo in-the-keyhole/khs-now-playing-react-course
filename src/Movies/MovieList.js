@@ -18,7 +18,7 @@ export default function MovieList({movies}) {
     })
     return (<div>
         <ul>
-            {movieList.map((item) => <li>{item}</li>) }
+            {movieList.map((item, index) => <li key={index}>{item}</li>) }
         </ul>
 
     </div>)

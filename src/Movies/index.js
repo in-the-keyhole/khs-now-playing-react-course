@@ -5,26 +5,26 @@ import MovieHeader from "../Components/MovieHeader";
 export default function Movies(props) {
     const [movies, setMovies] = useState([]);
     const [searchText, setSearchText] = useState('');
+    const [filteredMovies, setFilteredMovies] = useState([] || movies);
 
     useEffect(() => {
-        fetch('http://localhost:3001/api/nowPlaying').then((response) => response.json()).then(data => setMovies(data.results))
+        fetch('http://localhost:3001/api/nowPlaying').then((response) =>
+            response.json()).then(data => setMovies(data.results, setFilteredMovies(data.results)))
     }, []);
 
     let search = e => {
-        const searchText = e.target.value;
-        this.setState(() => ({
-            searchText,
-            filteredMovies: this.state.movies.filter(
-                movie =>
-                    movie.title.toLowerCase().match(searchText.toLowerCase()) != null
-            )
-        }))
+        setSearchText(e.target.value.toLowerCase());
+        setFilteredMovies(filteredMovies.filter(movie =>
+             movie.title.toLowerCase().match(searchText) != null)
+        );
+        if(searchText.length === 1){
+            setFilteredMovies(movies);
+        }
     };
-
 
     return (
         <div className="movie-container">
             <MovieHeader searchText={searchText} search={search} />
-            <MovieList movies={movies}{...console.log(movies)} />
+            <MovieList movies={filteredMovies}{...console.log(movies)} />
         </div>)
 }
