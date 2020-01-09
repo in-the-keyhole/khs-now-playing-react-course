@@ -1,3 +1,9 @@
+# React Coure - Application Practicum
+
+This repository contains an example React application that displays movies currently at the theater. It was built solely as a learning example and is not intended to be used beyond the learning experience.
+
+## About the Application 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
