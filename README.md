@@ -1,4 +1,4 @@
-# React Coure - Application Practicum
+# React Course - Application Practicum
 
 This repository contains an example React application that displays movies currently at the theater. It was built solely as a learning example and is not intended to be used beyond the learning experience.
 
