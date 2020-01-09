@@ -1,6 +1,6 @@
 # React Course - Application Practicum
 
-This repository contains an example React application that displays movies currently at the theater. It was built to be used in conjunction with the Keyhole Software React Learning Course. This application is simplified version of the [khs-react-now-playing](https://github.com/in-the-keyhole/khs-react-now-playing) reference application. 
+This repository contains an example React application that displays movies currently at the theater. It was built to be used in conjunction with the Keyhole Software React Learning Course. This application was designed to be a simplified version of the [khs-react-now-playing](https://github.com/in-the-keyhole/khs-react-now-playing) reference application. 
 
 ## About the Application 
 
