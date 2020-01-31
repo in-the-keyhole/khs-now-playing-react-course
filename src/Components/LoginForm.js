@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom'
 
 function LoginForm(props) {
-    const [values, setValues] = useState({});
+    const initialValues = {username: '', password: ''};
+    const [values, setValues] = useState(initialValues);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState({});
     let currentUser = JSON.parse(localStorage.getItem('currentUser'))
@@ -30,7 +31,7 @@ function LoginForm(props) {
             })
             .catch(err => {
                 setError({message: 'An error occurred. Please try again.'});
-                setValues({});
+                setValues(initialValues);
                 setIsSubmitting(false);
                 console.log(err);
             });
@@ -52,14 +53,17 @@ function LoginForm(props) {
                 id="username"
                 name="username"
                 type="text"
+                value={values.username}
                 placeholder="Username..."
                 onChange={handleChange}
                 className="form-control"
             />
+            <br />
             <input
                 id="password"
                 name="password"
                 type="password"
+                value={values.password}
                 placeholder="password"
                 onChange={handleChange}
                 className="form-control"
