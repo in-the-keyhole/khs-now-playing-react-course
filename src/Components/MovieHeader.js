@@ -1,8 +1,10 @@
 import React from 'react'
+import AuthButton from "./AuthButton";
 
 const MovieHeader = ({ searchText, search }) =>
     <div>
         <h3>Now Playing</h3>
+        <AuthButton/>
         <input
             autoFocus
             value={searchText}

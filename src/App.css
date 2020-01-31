@@ -38,7 +38,7 @@ h2 {
 
 .movie-container button {
   position: absolute;
-  top: 11px;
+  top: 0px;
   right: 25px;
   border: none;
   color: white;
@@ -48,6 +48,7 @@ h2 {
   line-height: 21px;
   width: auto;
   font-weight: bold;
+  border: 1px solid #000000;
 }
 
 .movie-container button:hover {
