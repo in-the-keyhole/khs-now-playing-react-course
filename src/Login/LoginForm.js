@@ -18,7 +18,7 @@ function LoginForm(props) {
     const handleSubmit = (event) =>{
         event.preventDefault();
         setIsSubmitting(true);
-        console.log('This login has been submitted', values);
+       // console.log('This login has been submitted', values);
         fetch('http://localhost:3001/api/authenticate', options)
             .then(res => res.json())
             .then(res => {
@@ -33,7 +33,7 @@ function LoginForm(props) {
                 setError({message: 'An error occurred. Please try again.'});
                 setValues(initialValues);
                 setIsSubmitting(false);
-                console.log(err);
+                console.error(err);
             });
     }
 
@@ -41,9 +41,9 @@ function LoginForm(props) {
         const target = event.target;
         const targetValue = target.value;
         const name = target.name;
-        console.log('form input name: ', name);
+        //console.log('form input name: ', name);
         setValues({...values, [name]: targetValue});
-        console.log(values);
+        //console.log(values);
     }
 
     return (

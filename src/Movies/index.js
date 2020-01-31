@@ -12,7 +12,7 @@ export default function Movies(props) {
             response.json()).then(data => setMovies(data.results, setFilteredMovies(data.results)))
     }, []);
 
-    let search = e => {
+    const search = e => {
         setSearchText(e.target.value.toLowerCase());
         setFilteredMovies(filteredMovies.filter(movie =>
              movie.title.toLowerCase().match(searchText) != null)

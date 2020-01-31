@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 export default function MovieList({movies}) {
-    let movieList = movies.map((item, index) => {
+    const movieList = movies.map((item, index) => {
         let url = `/about/${item.id}`;
 
         return (

@@ -5,13 +5,13 @@ import { Link, withRouter } from 'react-router-dom'
 function AuthButton(props) {
     let currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
-    function logout() {
+    const logout = () => {
         currentUser = null;
         localStorage.removeItem('currentUser');
         props.history.push('/');
     }
 
-    function createButton(){
+    const createButton = () => {
         if (currentUser !== null) {
             return  <button onClick={() => logout()}>Logout</button>
         } else {
