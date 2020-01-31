@@ -8,10 +8,10 @@ import Login from "./Login"
 function App() {
     const Main = () =>
         <Switch>
-        <Route exact path="/" component={Movies}  />
-        <Route path="/about/:id" component={MovieDetail} />
-        <Route path="/login" component={Login} />
-    </Switch>
+            <Route exact path="/" component={Movies}  />
+            <Route path="/about/:id" component={MovieDetail} />
+            <Route path="/login" component={Login} />
+        </Switch>
 
   return (
       <BrowserRouter>

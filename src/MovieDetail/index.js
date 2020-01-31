@@ -17,7 +17,7 @@ export default function MovieDetail(props) {
                 <span className="close"/>
             </Link>
             <img src={`${process.env.PUBLIC_URL}/images/backdrops${movie.backdrop_path}`}
-                alt={`Backdrop for ${movie.backdrop_path}`}
+                 alt={`Backdrop for ${movie.backdrop_path}`}
             />
         </div>
 

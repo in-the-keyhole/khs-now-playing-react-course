@@ -5,6 +5,7 @@
     width: 200%;
     height: 200%;
 }
+
 #bg img {
     position: absolute;
     top: 0;
@@ -77,4 +78,6 @@ button:disabled {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.error {color: #ed0d0d}
+.error {
+    color: #ed0d0d
+}

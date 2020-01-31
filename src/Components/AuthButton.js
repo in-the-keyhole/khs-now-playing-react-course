@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 
 // withRouter lets you decorate components with context
 function AuthButton(props) {
@@ -13,7 +13,7 @@ function AuthButton(props) {
 
     const createButton = () => {
         if (currentUser !== null) {
-            return  <button onClick={() => logout()}>Logout</button>
+            return <button onClick={() => logout()}>Logout</button>
         } else {
             return (
                 <Link to={`/login`}>

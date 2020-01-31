@@ -15,16 +15,16 @@ export default function Movies(props) {
     const search = e => {
         setSearchText(e.target.value.toLowerCase());
         setFilteredMovies(filteredMovies.filter(movie =>
-             movie.title.toLowerCase().match(searchText) != null)
+            movie.title.toLowerCase().match(searchText) != null)
         );
-        if(searchText.length === 1){
+        if (searchText.length === 1) {
             setFilteredMovies(movies);
         }
     };
 
     return (
         <div className="movie-container">
-            <MovieHeader searchText={searchText} search={search} />
+            <MovieHeader searchText={searchText} search={search}/>
             <MovieList movies={filteredMovies}{...console.log(movies)} />
         </div>)
 }

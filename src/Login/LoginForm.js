@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { withRouter } from 'react-router-dom'
+import React, {useState} from 'react';
+import {withRouter} from 'react-router-dom'
 
 function LoginForm(props) {
     const initialValues = {username: '', password: ''};
@@ -15,10 +15,10 @@ function LoginForm(props) {
         }
     };
 
-    const handleSubmit = (event) =>{
+    const handleSubmit = (event) => {
         event.preventDefault();
         setIsSubmitting(true);
-       // console.log('This login has been submitted', values);
+        // console.log('This login has been submitted', values);
         fetch('http://localhost:3001/api/authenticate', options)
             .then(res => res.json())
             .then(res => {
@@ -37,7 +37,7 @@ function LoginForm(props) {
             });
     }
 
-    const handleChange = (event) =>{
+    const handleChange = (event) => {
         const target = event.target;
         const targetValue = target.value;
         const name = target.name;
@@ -48,7 +48,7 @@ function LoginForm(props) {
 
     return (
         <form onSubmit={handleSubmit}>
-            { <h4 className="error">{error.message}</h4> }
+            {<h4 className="error">{error.message}</h4>}
             <input
                 id="username"
                 name="username"
@@ -58,7 +58,7 @@ function LoginForm(props) {
                 onChange={handleChange}
                 className="form-control"
             />
-            <br />
+            <br/>
             <input
                 id="password"
                 name="password"

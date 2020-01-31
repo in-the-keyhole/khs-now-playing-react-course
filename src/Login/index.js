@@ -11,7 +11,7 @@ function Login(props) {
                 alt=""
             />
             <div id="page-wrap">
-            <LoginForm/>
+                <LoginForm/>
             </div>
 
             <div id="bg">

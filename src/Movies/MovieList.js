@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export default function MovieList({movies}) {
     const movieList = movies.map((item, index) => {
@@ -18,7 +18,7 @@ export default function MovieList({movies}) {
     })
     return (<div>
         <ul>
-            {movieList.map((item, index) => <li key={index}>{item}</li>) }
+            {movieList.map((item, index) => <li key={index}>{item}</li>)}
         </ul>
 
     </div>)
