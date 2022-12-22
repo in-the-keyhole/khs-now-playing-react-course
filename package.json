@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "body-parser": "^1.17.2",
-    "jsonwebtoken": "^7.4.3",
+    "jsonwebtoken": "^9.0.0",
     "npm-run-all": "^4.0.2",
     "underscore": "^1.8.3"
   },
